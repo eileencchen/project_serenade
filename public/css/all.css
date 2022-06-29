@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Jacques Francois';
+}
+
+body{
+    margin: 0;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+/* header start */
+.main-header{
+    background-color: white; 
+}
+.main-header>.container{
+    display: flex;
+    padding:0 16px 0 16px;
+    max-width:1640px;
+    margin: auto;
+}
+
+.main-header .logo{
+    width: 200px;
+    left: 0%;
+    right: 78.44%;
+    top: 0%;
+    bottom: 19.27%;
+}
+
+.main-header .logo img{
+    width: 100%;
+    line-height: 100px;
+    vertical-align: middle;
+}
+
+.main-header .main-nav{
+    display:flex;
+    align-items: center;
+    /* height: 30px; */
+    margin-right:10px;
+}
+
+.main-header .main-nav a{
+    
+    text-decoration: none;
+    /* line-height: 20px; */
+    color:rgba(53, 47, 47, 0.85);
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    padding:15px 1em;
+  
+}
+
+.img-fluid{
+    width: 100%;
+}
+/* header END */
+
+/* banner start */
+.banner{
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+}
+
+/* 圓標外框 */
+
+.banner-shop .button{
+    position:absolute;
+    font-family: 'Ultra';
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 31px;
+    text-align: center;
+    top:80%;
+    left: 75%;
+    transform:translateX(-50%) translateY(-50%) ;
+    /* background: #333f48; */
+    color: #ffffff;
+    /* transition: .3s ease; */
+    
+    }
+
+
+header>.container nav>ul{
+    display:flex;
+    justify-content: space-between;
+}
+
+
+header>.container nav>ul>li{
+  margin-right: 30px;
+}
+header>.container nav>ul>li>a{
+    line-height: 21px;
+    text-align:center;  
+    color:rgba(53, 47, 47, 0.85);
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+header>.container>nav>ul>li>a:hover{
+   border-bottom:2px solid  #EE829E ;
+   padding-left:5px;
+   padding-right:5px;
+
+}
+
+/* calender start */
+section>.container{
+    margin: 0 auto;
+}
+
+section>img{
+    display: flex;
+    width: 57%;
+    margin-left: 30px;
+    margin-top: 0px;
+    margin-left: 30px;
+}
+
+section>.calendartext{
+    display: flex;
+}
+
