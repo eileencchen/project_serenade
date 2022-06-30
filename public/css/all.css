@@ -1,7 +1,9 @@
+
 *{
     margin: 0;
     padding: 0;
-    font-family:'Jacques Francois';
+    list-style: none;
+    /* font-family: 'Jacques'; */
 }
 
 body{
@@ -19,6 +21,7 @@ a{
 }
 .main-header>.container{
     display: flex;
+    justify-content: space-between;
     padding:0 16px 0 16px;
     max-width:1640px;
     margin: auto;
@@ -46,15 +49,22 @@ a{
 }
 
 .main-header .main-nav a{
-    
     text-decoration: none;
-    /* line-height: 20px; */
     color:rgba(53, 47, 47, 0.85);
-    font-size: 16px;
-    letter-spacing: 1.5px;
-    padding:15px 1em;
+    font-family:'Jacques Francois';
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding:10px 1em;
+    margin-right: 10px;
   
 }
+
+.main-header .main-nav a:hover{
+    border-bottom:2px solid  #F09F8F ;
+    padding-left:3px;
+    padding-right:3px;
+ 
+ }
 
 .img-fluid{
     width: 100%;
@@ -71,17 +81,17 @@ a{
 
 /* 圓標外框 */
 
-.banner-shop .button{
+a.button{
     position:absolute;
     font-family: 'Ultra';
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 350;
     letter-spacing: 2px;
     line-height: 31px;
     text-align: center;
     top:80%;
-    left: 75%;
-    transform:translateX(-50%) translateY(-50%) ;
+    left: 72%;
+    transform:translateX(-50%);
     /* background: #333f48; */
     color: #ffffff;
     /* transition: .3s ease; */
@@ -89,44 +99,102 @@ a{
     }
 
 
-header>.container nav>ul{
-    display:flex;
-    justify-content: space-between;
+/* section start */
+.wrap{
+    width: 1200px;
+    margin: auto;
 }
 
-
-header>.container nav>ul>li{
-  margin-right: 30px;
-}
-header>.container nav>ul>li>a{
-    line-height: 21px;
-    text-align:center;  
-    color:rgba(53, 47, 47, 0.85);
-    font-size: 16px;
-    letter-spacing: 1px;
-}
-
-header>.container>nav>ul>li>a:hover{
-   border-bottom:2px solid  #EE829E ;
-   padding-left:5px;
-   padding-right:5px;
-
-}
-
-/* calender start */
-section>.container{
-    margin: 0 auto;
-}
-
-section>img{
+.item{
     display: flex;
-    width: 57%;
-    margin-left: 30px;
-    margin-top: 0px;
-    margin-left: 30px;
+    align-items: center;
+    margin-bottom: 50px;
+    /* font-family:'Times New Roman', Times, serif; */
+}
+.item h3{
+    color:#F09F8F;
+    font-size: 1.5em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:700;
+    margin-bottom: 10px;
 }
 
-section>.calendartext{
-    display: flex;
+.item p{
+    font-weight:500;
+    line-height: 2em;
+    padding-left: 20px;
+
 }
+.item .pic{
+    width: 55%;
+}
+.item .pic img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+.item .text{
+    width: 55%;
+    color:#222222;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3 ;
+}
+
+.item > :first-child{
+    margin-right: -10%;
+}
+
+.item:nth-child(1) .text{
+    background-color:#FEF4F1;
+    border-right: 2px solid #F09F8F;
+}
+
+.item:nth-child(2) .text{
+    background-color:#fbdccdc6;
+    border-left: 2px solid #F09F8F;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.col-6{
+    width: calc(100% / 2 - 60px);
+    margin:0px 15px 40px 15px;
+}
+
+.text-call-to-action {
+    position: absolute;
+    border: 1px solid #fff;
+    padding: 10px;
+    color: blue;
+    transition: .5s;
+    left: 32%;
+    /* bottom:80%; */
+    transform: translate(-50%,-50%);
+    }
+/* footer start */
+footer{
+    background-color: #C89CA3;
+    padding: 40 0 40 0;
+}
+dt{
+    font-size:1.2em;
+    margin-bottom: 10px;
+}
+
+dd{
+    margin-bottom: 4px;
+
+}
+    
+dd>a{
+    color: aliceblue;
+}
+
+
 
