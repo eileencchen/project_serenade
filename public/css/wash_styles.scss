@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+    max-width:1140px;
+    width: 90%;
+    margin:auto;
+    // background-color:rgba(253, 253, 253, 0.918);
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+// 圖片相關樣式
+.img{
+    max-width: 100%;
+    background-position: center center;
+    // box-sizing: border-box;
+}
+
+// 圖片相關樣式
+// =====================
+
+.img-fluid{
+    width: 100%;
+}
+
+.img-rounded{
+    border-radius: 8px;
+}
+.img-circle{
+    border-radius:100%
+}
+
+// 文字相關樣式
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+// ==============
+@for $i from 1 through 12{
+    .col-#{$i}{
+        --num:calc(12 / #{$i});
+        width: calc(100% / var(--num) - 30px);
+        margin:0px 15px 40px 15px;    
+    }
+}
+
+@media (min-width:768px){
+    @for $i from 1 through 12 {
+        .col-md-#{$i}{
+            --num: calc(12 / #{$i});
+            width: calc(100% / var(--num) - 30px);
+            margin: 0px 15px 40px 15px;
+        }
+    }
+}
+
+
+// $i index
+// for迴圈
+// from through 從1到3
+@for $i from 1 through 10{
+    .fz-#{$i}{
+        font-size:$i*1em;
+    }
+}
+
+@for $i from 1 through 5{
+    .mb-#{$i}{
+        margin-bottom: $i * 1em;
+    }
+}
+
+@media
+
+
+//===============================
+//============header===============
+// ===============================
+
+header{
+    padding:20px 0px;
+    background-color: lightblue;
+    }
+header>.container>.row{
+    justify-content: space-between;
+
+}
+
+.flex-space-around{
+
+
+}
+
+.flex-space-between{
+
+}
+@media(max-width:767px){
+    header{
+        position: relative;
+
+    }
+    nav{
+        position: absolute;
+        width: 100%;
+        top:76px;
+        left:0;
+        // display:none;
+    }
+
+    nav,.active{
+
+    }
+
+    nav li{
+        text-align:center;
+        line-height: 60px;
+    }
+    nav a{
+        display:block;
+        text-align: center;
+        background-color: rgb(132, 81, 81);
+        color:black;
+        
+    }
+
+    .submenu{
+        display:none;
+    }
+
+    .submenu.active{
+        display:block;
+    }
+超過768px隱藏起來
+@media (min-width:768px){
+    //.icon-menu{
+        display:none;
+}
+
+.display-md-none{
+    display: none;
+}
+
+.display-md-block{
+    display: block;
+}
+
+.display-md-flex{
+    display: flex;
+}
+
+
+
+
+
+// ========banner=======
+.banner{
+    background-color: pink;
+    //放上圖片後高度
+    height: 400px;
+}
+// ========news========
+.news-section{
+    background-color:  lightyellow;
+    background-image: url(../images/cat.jpg);
+    height: 400px;
+}
+
+.news-section li{
+    border-bottom: ;
+}
+.news-section ul{
+    margin-top: 10px;
+}
+@media (min-width:768px){
+    .news-section ul{
+        margin-left: 10%;
+        width: 90%;
+    }
+}
+
+.product1.section{
+    background-color: lightyellow;
+    height: 400px;
+}
+
+.product2.section{
+    background-color: lightyellow;
+    height: 400px;
+}
