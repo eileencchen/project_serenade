@@ -162,19 +162,14 @@ $primary-color:#F09F8F;
     width: 100%;
 }
 
-@media (min-width:768px){
-  
-}
-    
-}
-
-.tool-bar ul {
+ .tool-bar ul {
     display:flex;
     margin-top: 65%;
  
 }
+}
+//767 end
 
- 
 
 @media (min-width:768px){
     .display-md-block{
@@ -183,7 +178,7 @@ $primary-color:#F09F8F;
         
     }
     
-      .display-md-none{
+     .display-md-none{
         display: none;
     }
     .main-header .menu-btn{
@@ -265,19 +260,25 @@ $primary-color:#F09F8F;
 }
 
 @media (max-width:768px) {
+.item{
+        display: flex;
+        flex-wrap: wrap;
+    }
 .item .text{
-    width: 100%;
+width: 100%; 
 }
+
 .item .pic{
-    width: 100%;
+width: 100%;
 }
 }
 
 /*sectio product start */
 
-section .container{
-   background:#FEF4F1;
-   margin: auto;
+section> .container{
+//    background:#FEF4F1;
+    max-width: 1140px;
+    padding: 30px;
        
 }
 .row {
@@ -290,16 +291,35 @@ section .container{
 .text-center{
     text-align: center;
 }
+//collection字型樣式//
 
-
-.container h2{
+.title{
    color :#F09F8F;
 }
-.container h4{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color : #F09F8F;
+
+.title span {
+    display: block;
+    font-size: 1em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     color : #F09F8F;
+    position: relative;
     margin-bottom: 10px;
-}
+  }
+
+  .title span:before,.title span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    background: #aaa;
+    width: 8%;
+    height: 1px;
+  }
+  .title span:before {
+    left: 30%; 
+  }
+  .title span:after {
+    right: 30%;
+  }
 
 
 .col-6> .product{
@@ -322,6 +342,7 @@ width: 100%;
     bottom:10px;
     transform: translate(-50%);
     }
+
 
 /* collection end */
 
@@ -409,6 +430,3 @@ footer p{
     color: #434343;
     line-height: 16px;
 }
-
-
-
