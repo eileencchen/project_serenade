@@ -27,73 +27,73 @@ a {
 .col-1 {
   --num: calc(12 / 1);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 20px 15px;
 }
 
 .col-2 {
   --num: calc(12 / 2);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 20px 15px;
 }
 
 .col-3 {
   --num: calc(12 / 3);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 20px 15px;
 }
 
 .col-4 {
   --num: calc(12 / 4);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 20px 15px;
 }
 
 .col-5 {
   --num: calc(12 / 5);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 20px 15px;
 }
 
 .col-6 {
   --num: calc(12 / 6);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 20px 15px;
 }
 
 .col-7 {
   --num: calc(12 / 7);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 20px 15px;
 }
 
 .col-8 {
   --num: calc(12 / 8);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 20px 15px;
 }
 
 .col-9 {
   --num: calc(12 / 9);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 20px 15px;
 }
 
 .col-10 {
   --num: calc(12 / 10);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 20px 15px;
 }
 
 .col-11 {
   --num: calc(12 / 11);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 20px 15px;
 }
 
 .col-12 {
   --num: calc(12 / 12);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px 20px 15px;
 }
 
 @media (min-width: 768px) {
@@ -273,8 +273,6 @@ a {
 }
 
 .main-header .main-nav {
-  /* display:flex; */
-  align-items: center;
   /* height: 30px; */
   margin-right: 10px;
 }
@@ -302,7 +300,6 @@ a {
   .main-header .menu-btn {
     position: relative;
     width: 30px;
-    height: 30px;
     cursor: pointer;
     /* background-color:lightblue; */
   }
@@ -313,11 +310,14 @@ a {
     width: 20px;
     height: 1px;
     background-color: #222222;
-    top: 50px;
-    left: 20px;
-    right: 2px;
+    top: 50%;
+    left: 50%;
     box-shadow: 0px 8px 0px #161A14, 0px -8px 0px #161A14;
     transition: all 0.5s;
+  }
+
+  .main-header .main-nav {
+    display: none;
   }
 
   .main-nav {
@@ -339,14 +339,24 @@ a {
     min-width: 200px;
     display: flex;
   }
-}
-.img-fluid {
-  width: 100%;
-}
 
+  .img-fluid {
+    width: 100%;
+  }
+
+  .tool-bar ul {
+    display: flex;
+    margin-top: 65%;
+  }
+
+  .main-nav {
+    position: fixed;
+  }
+}
 @media (min-width: 768px) {
   .display-md-block {
-    display: block !important;
+    display: inline-block !important;
+    margin-top: 40px;
   }
 
   .display-md-none {
@@ -368,7 +378,7 @@ a {
 
 /* section start */
 .wrap {
-  width: 1140px;
+  max-width: 1140px;
   margin: auto;
 }
 
@@ -411,7 +421,7 @@ a {
   z-index: 3;
 }
 
-.item > :first-child {
+.item :first-child {
   margin-right: -10%;
 }
 
@@ -425,7 +435,21 @@ a {
   border-left: 2px solid #F09F8F;
 }
 
+@media (max-width: 768px) {
+  .item .text {
+    width: 100%;
+  }
+
+  .item .pic {
+    width: 100%;
+  }
+}
 /*sectio product start */
+section .container {
+  background: #FEF4F1;
+  margin: auto;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -436,38 +460,29 @@ a {
 }
 
 .container h2 {
-  color: #222222;
+  color: #F09F8F;
 }
 
 .container h4 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: #222222;
+  color: #F09F8F;
   margin-bottom: 10px;
 }
 
-.col-6 {
-  width: calc(50% - 60px);
-  margin: 0px 15px 40px 15px;
-}
-
-.col-3 {
-  width: calc(25% - 60px);
-  margin: 0px 27px 30px 32px;
-}
-
 .col-6 > .product {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   position: relative;
   width: 100%;
-  height: 100%;
 }
 
 .text-call-to-action {
   position: absolute;
-  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.3568627451);
+  border: 2px solid #ffffff;
   padding: 10px;
   font-weight: 700;
-  color: #ffffff;
+  color: #434343;
   /* transition: .5s; */
   left: 50%;
   bottom: 10px;
@@ -482,7 +497,7 @@ footer {
 }
 
 dt {
-  color: #616161;
+  color: #434343;
   border-bottom: 1px dotted #FBDCCD;
   font-weight: 700;
   font-size: 1em;
@@ -496,7 +511,7 @@ dd {
 }
 
 dd > a {
-  color: #222222;
+  color: #434343;
 }
 
 .footer-subs form {
@@ -518,13 +533,14 @@ dd > a {
 
 .footer-subs input[type=submit] {
   background-color: #7AB7E5;
+  width: 50px;
   color: #ffffff;
   border-radius: 10px;
   flex-grow: 1;
 }
 
 .footer-subs h4 {
-  color: #616161;
+  color: #434343;
   border-bottom: 1px dotted #FBDCCD;
   font-weight: 700;
   font-size: 1.2em;
@@ -552,6 +568,6 @@ dd a {
 footer p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
-  color: #a0a0a0;
+  color: #434343;
   line-height: 16px;
 }/*# sourceMappingURL=all.css.map */
