@@ -343,16 +343,12 @@ a {
   .img-fluid {
     width: 100%;
   }
-
-  .tool-bar ul {
-    display: flex;
-    margin-top: 65%;
-  }
-
-  .main-nav {
-    position: fixed;
-  }
 }
+.tool-bar ul {
+  display: flex;
+  margin-top: 65%;
+}
+
 @media (min-width: 768px) {
   .display-md-block {
     display: inline-block !important;
@@ -365,6 +361,10 @@ a {
 
   .main-header .menu-btn {
     display: none;
+  }
+
+  .img-fluid {
+    width: 100%;
   }
 }
 /* header END */
@@ -516,7 +516,7 @@ dd > a {
 
 .footer-subs form {
   display: flex;
-  width: 100%;
+  width: 70%;
   margin: auto 0px;
 }
 
@@ -527,13 +527,13 @@ dd > a {
 }
 
 .footer-subs input[type=text] {
-  width: 0;
+  width: 50%;
   flex-grow: 1;
 }
 
 .footer-subs input[type=submit] {
   background-color: #7AB7E5;
-  width: 50px;
+  width: 10%;
   color: #ffffff;
   border-radius: 10px;
   flex-grow: 1;
