@@ -102,7 +102,7 @@ $primary-color:#F09F8F;
     font-family:'Jacques Francois';
     font-size: 20px;
     letter-spacing: 1px;
-    padding:10px 1em;
+    padding:10px .5em;
     margin-right: 10px;
 
 }
@@ -123,10 +123,8 @@ $primary-color:#F09F8F;
     .main-header .menu-btn{
         position:relative;
         width: 30px;
-        // height: 30px;
-        cursor:pointer;
-        /* background-color:lightblue; */
-    } 
+        cursor:pointer;}
+       
     .main-header .menu-btn::before{
         position:absolute;
         content: "";
@@ -171,6 +169,7 @@ $primary-color:#F09F8F;
  
 }
 }
+
 //767 end
 
 
@@ -310,7 +309,7 @@ section> .container{
   }
 
   .title span:before,.title span:after {
-    content: "";
+    content:"";
     position: absolute;
     top: 50%;
     background: #aaa;
@@ -335,18 +334,18 @@ width: 100%;
 
 .text-call-to-action {
     position: absolute;
-    background-color:#ffffff5b;
+    background-color:#ffffff27;
     border: 2px solid #ffffff;
     padding: 10px;
     font-weight: 700;
     color: #434343;
-    /* transition: .5s; */
+    // transition: .5s; 
     left: 50%;
     bottom:10px;
     transform: translate(-50%);
     }
 
-
+ 
 /* collection end */
 
 /* footer start */

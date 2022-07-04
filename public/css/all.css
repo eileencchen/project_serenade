@@ -545,6 +545,8 @@ dd > a {
   margin: auto 0px;
 }
 
+
+
 .footer-subs input[type=text],
 .footer-subs input[type=submit] {
   border: none;
@@ -563,6 +565,7 @@ dd > a {
   border-radius: 10px;
   flex-grow: 1;
 }
+
 
 .footer-subs h4 {
   color: #434343;

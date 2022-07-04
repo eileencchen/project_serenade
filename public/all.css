@@ -283,7 +283,7 @@ a {
   font-family: "Jacques Francois";
   font-size: 20px;
   letter-spacing: 1px;
-  padding: 10px 1em;
+  padding: 10px 0.5em;
   margin-right: 10px;
 }
 
@@ -301,7 +301,6 @@ a {
     position: relative;
     width: 30px;
     cursor: pointer;
-    /* background-color:lightblue; */
   }
 
   .main-header .menu-btn::before {
@@ -503,12 +502,11 @@ section > .container {
 
 .text-call-to-action {
   position: absolute;
-  background-color: #ffffff5b;
+  background-color: #ffffff27;
   border: 2px solid #ffffff;
   padding: 10px;
   font-weight: 700;
   color: #434343;
-  /* transition: .5s; */
   left: 50%;
   bottom: 10px;
   transform: translate(-50%);
