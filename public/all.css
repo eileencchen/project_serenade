@@ -246,14 +246,13 @@ a {
 .main-header {
   background-color: white;
   display: flex;
+  justify-content: space-between;
 }
 
 .main-header .container {
-  /* display: flex;
-  justify-content: space-between;
-  padding:0 16px 0 16px;
-  max-width:1640px;
-  margin: auto; */
+  padding: 0 16px 0 16px;
+  max-width: 1640px;
+  margin: auto;
   max-width: 226px;
   width: 90%;
 }

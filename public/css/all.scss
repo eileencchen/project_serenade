@@ -60,13 +60,14 @@ $primary-color:#F09F8F;
 .main-header{
     background-color: white; 
     display: flex;
+    justify-content: space-between;
 }
 .main-header .container{
-    /* display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     padding:0 16px 0 16px;
     max-width:1640px;
-    margin: auto; */
+    margin: auto; 
     max-width: 226px;
     width: 90%;
 }
@@ -87,7 +88,7 @@ $primary-color:#F09F8F;
 
 .main-header .main-nav{
     // display:flex; 
-    // align-items: center;
+    // justify-content: space-between;
     /* height: 30px; */
     margin-right:10px;
  
