@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  /* font-family: 'Jacques'; */
 }
 
 body {
@@ -283,12 +282,12 @@ a {
   font-family: "Jacques Francois";
   font-size: 20px;
   letter-spacing: 1px;
-  padding: 10px 1em;
+  padding: 10px 0.5em;
   margin-right: 10px;
 }
 
 .main-header .main-nav a:hover {
-  border-bottom: 2px solid #F09F8F;
+  border-bottom: 2px solid rgb(240, 159, 143);
 }
 
 @media (max-width: 767px) {
@@ -301,7 +300,6 @@ a {
     position: relative;
     width: 30px;
     cursor: pointer;
-    /* background-color:lightblue; */
   }
 
   .main-header .menu-btn::before {
@@ -427,12 +425,12 @@ a {
 
 .item:nth-child(1) .text {
   background-color: #FEF4F1;
-  border-right: 2px solid #F09F8F;
+  border-right: 2px solid rgb(240, 159, 143);
 }
 
 .item:nth-child(2) .text {
   background-color: rgba(251, 220, 205, 0.7764705882);
-  border-left: 2px solid #F09F8F;
+  border-left: 2px solid rgb(240, 159, 143);
 }
 
 @media (max-width: 768px) {
@@ -503,12 +501,11 @@ section > .container {
 
 .text-call-to-action {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.3568627451);
+  background-color: rgba(255, 255, 255, 0.1529411765);
   border: 2px solid #ffffff;
   padding: 10px;
   font-weight: 700;
   color: #434343;
-  /* transition: .5s; */
   left: 50%;
   bottom: 10px;
   transform: translate(-50%);
@@ -545,8 +542,6 @@ dd > a {
   margin: auto 0px;
 }
 
-
-
 .footer-subs input[type=text],
 .footer-subs input[type=submit] {
   border: none;
@@ -566,7 +561,6 @@ dd > a {
   flex-grow: 1;
 }
 
-
 .footer-subs h4 {
   color: #434343;
   border-bottom: 1px dotted #FBDCCD;
@@ -578,7 +572,7 @@ dd > a {
 }
 
 .footer-subs h4 span {
-  color: #F09F8F;
+  color: rgb(240, 159, 143);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 900;
 }
@@ -598,4 +592,83 @@ footer p {
   font-size: 12px;
   color: #434343;
   line-height: 16px;
+}
+
+.breadcrumb {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.breadcrumb a {
+  color: rgb(240, 159, 143);
+}
+
+.breadcrumb li::before {
+  content: "/";
+  padding: 8px;
+  color: rgb(240, 159, 143);
+}
+
+.breadcrumb li:first-child::before {
+  display: none;
+}
+
+aside {
+  background-image: url(../images/spikes.webp);
+}
+
+aside > ul li a {
+  color: #161A14;
+  padding-left: 20px;
+}
+
+.btn-primary {
+  display: block;
+  background-color: white;
+  color: rgb(240, 159, 143);
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+
+.text-primary {
+  color: #BD655C;
+}
+
+.img-wrap {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.img-overlay {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.img-wrap img {
+  vertical-align: top;
+  transition: all 0.5s;
+}
+
+.img-wrap img:hover {
+  transform: scale(1.5);
+}
+
+.icon-new {
+  position: absolute;
+  width: 50px;
+  line-height: 50px;
+  color: #121212;
+  border-radius: 100%;
+  background-color: rgb(240, 159, 143);
+  left: -25px;
+  top: -25px;
+}
+
+.flex-space-between {
+  justify-content: space-between;
 }/*# sourceMappingURL=all.css.map */

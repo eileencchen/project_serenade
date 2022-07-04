@@ -1,23 +1,22 @@
-$primary-color:#F09F8F;
+$primary-color:rgb(240, 159, 143);
+ *{
+ margin: 0;
+  padding: 0;
+  list-style: none;
+//     /* font-family: 'Jacques'; */
+ }
 
-*{
+body{
     margin: 0;
-    padding: 0;
-    list-style: none;
-    /* font-family: 'Jacques'; */
-}
-
-    body{
-        margin: 0;
-        background-image: url(../images/white_wall_hash.webp);
+    background-image: url(../images/white_wall_hash.webp);
 
     }
 
-	img{
-		vertical-align: top;
+img{
+	vertical-align: top;
 	}
 
-	a{
+a{
     text-decoration: none;
 }
 
@@ -432,3 +431,88 @@ footer p{
     color: #434343;
     line-height: 16px;
 }
+
+.breadcrumb {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+.breadcrumb a{
+    color: $primary-color;
+} 
+
+
+.breadcrumb li::before{
+    content: "/";
+    padding:8px;
+    color: $primary-color;
+  }
+
+  .breadcrumb li:first-child::before{
+    display: none;
+  }
+
+  aside{
+    background-image: url(../images/spikes.webp);
+  }
+  aside>ul li a{
+    color: #161A14;
+    padding-left: 20px;
+  }
+
+  .btn-primary {
+    display: block;
+    background-color: white;
+    color: $primary-color;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+  }
+
+  .text-primary {
+    color: #BD655C;
+  }
+  
+  .img-wrap {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .img-overlay {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .img-wrap img {
+    vertical-align: top;
+    transition: all 0.5s;
+  }
+  
+  .img-wrap img:hover {
+    transform: scale(1.5);
+  }
+  
+  .icon-new {
+    position: absolute;
+    width: 50px;
+    line-height: 50px;
+    color: #121212;
+    border-radius: 100%;
+    background-color: $primary-color;
+    left: -25px;
+    top: -25px;
+  }
+  
+  .flex-space-between {
+    justify-content: space-between;
+  }
+  
+  
+  
+
+
+
