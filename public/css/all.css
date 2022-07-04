@@ -8,6 +8,7 @@
 
 body {
   margin: 0;
+  background-image: url(../images/white_wall_hash.webp);
 }
 
 img {
@@ -540,7 +541,7 @@ dd > a {
 
 .footer-subs form {
   display: flex;
-  width: 100%;
+  width: 70%;
   margin: auto 0px;
 }
 
@@ -557,7 +558,7 @@ dd > a {
 
 .footer-subs input[type=submit] {
   background-color: #7AB7E5;
-  width: 50%;
+  width: 10%;
   color: #ffffff;
   border-radius: 10px;
   flex-grow: 1;
