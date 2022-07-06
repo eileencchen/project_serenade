@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  box-sizing:border-box;
 }
 
 body {
@@ -287,7 +288,7 @@ a {
 }
 
 .main-header .main-nav a:hover {
-  border-bottom: 2px solid rgb(240, 159, 143);
+  border-bottom: 2px solid #f09f8f;
 }
 
 @media (max-width: 767px) {
@@ -425,12 +426,12 @@ a {
 
 .item:nth-child(1) .text {
   background-color: #FEF4F1;
-  border-right: 2px solid rgb(240, 159, 143);
+  border-right: 2px solid #f09f8f;
 }
 
 .item:nth-child(2) .text {
   background-color: rgba(251, 220, 205, 0.7764705882);
-  border-left: 2px solid rgb(240, 159, 143);
+  border-left: 2px solid #f09f8f;
 }
 
 @media (max-width: 768px) {
@@ -538,7 +539,7 @@ dd > a {
 
 .footer-subs form {
   display: flex;
-  width: 70%;
+  width: 100%;
   margin: auto 0px;
 }
 
@@ -559,6 +560,7 @@ dd > a {
   color: #ffffff;
   border-radius: 10px;
   flex-grow: 1;
+  cursor: pointer;
 }
 
 .footer-subs h4 {
@@ -572,7 +574,7 @@ dd > a {
 }
 
 .footer-subs h4 span {
-  color: rgb(240, 159, 143);
+  color: #f09f8f;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 900;
 }
@@ -602,32 +604,28 @@ footer p {
 }
 
 .breadcrumb a {
-  color: rgb(240, 159, 143);
+  color: #f09f8f;
 }
 
 .breadcrumb li::before {
   content: "/";
   padding: 8px;
-  color: rgb(240, 159, 143);
+  color: #f09f8f;
 }
 
 .breadcrumb li:first-child::before {
   display: none;
 }
 
-aside {
-  background-image: url(../images/spikes.webp);
-}
-
 aside > ul li a {
-  color: #161A14;
+  color: #222222;
   padding-left: 20px;
 }
 
 .btn-primary {
   display: block;
   background-color: white;
-  color: rgb(240, 159, 143);
+  color: #f09f8f;
   padding: 8px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -664,7 +662,7 @@ aside > ul li a {
   line-height: 50px;
   color: #121212;
   border-radius: 100%;
-  background-color: rgb(240, 159, 143);
+  background-color: #f09f8f;
   left: -25px;
   top: -25px;
 }
