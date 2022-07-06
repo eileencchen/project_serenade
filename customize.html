@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenade | 客製化</title>
+    <link rel="stylesheet" href="public/css/all.css">
+    
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-left">
+            <div class="menu-btn"></div>
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="public/images/Logo.png" alt="logo">
+                </a>
+            </div>
+        </div>
+        <nav class="main-nav " id="btn-nav-toggle" href= "javascript:;">
+            <a href="productlist.html">Shop</a>
+            <a href="#">About us</a>
+            <a href="customize.html">Customize</a>
+            <a href="faq.html">FAQ</a>
+            <a href="#" class="display-none display-md-block">
+                <img src="public/images/profile.png" alt="profile">
+            </a>
+            <a href="#"  class="display-none display-md-block">
+                <img src="public/images/shoppingcart.png" alt="shopping">
+            </a>
+        </nav>
+        <!-- //手機板767 icon start// -->
+        <nav class="tool-bar display-md-none">
+            <ul >
+                <li>
+                    <a href="profile.html">
+                        <img src="public/images/profile.png" alt="profile">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="public/images/shoppingcart.png" alt="shopping">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- //手機板767 icon end// -->
+    </header>
+    <main>
+        <div class="banner">
+            <img class="img-fluid" src="public/images/customize banner.svg" alt="寶寶客製小物">
+        </div>
+        <div class="container-custom">
+            <div class="customize-txt">
+                <h4>目前商品製作天數約<span>7-12</span>個工作天起</h4>
+                <br>
+                <h5>【購買前請務必詳閱常見問題】</h5>
+            </div>
+            <!-- 表單start -->
+            
+            <section class="form">
+                <form action="">
+                    <!-- 一定要寫name才會傳值 -->
+                    <label for="year">年齡</label>
+                    <select class="input-width" name="" id="">
+                        <option value="">0-6個月</option>
+                        <option value="">6個月-2歲</option>
+                        <option value="">2歲以上</option>
+                    </select>
+                    <label for="gender">性別:
+                        <input type="radio" name="gender" value="男">男寶
+                        <input type="radio" name="gender" value="女">女寶
+                   </label> 
+                   <br>
+                    <label for="style">款式</label>
+                    <select class="input-width" name="" id="">
+                        <option value="">雙面兜兜</option>
+                        <option value="">安撫巾</option>
+                        <option value="">口水巾</option>
+                        <option value="">絨毛圍脖</option>
+                        <option value="">連身/吊帶褲</option>
+                        <option value="">洋裝</option>
+                        <option value="">彌月禮盒</option>
+                        <option value="">其他</option>
+                    </select>
+                    <label for="fabric">布花 / 配色</label>
+                    <input class="input-width" type="text" name="fabricstyles" id="fabricstyles" placeholder="請輸入布花/配色">
+                    <label for="message">細節描述</label>
+                    <textarea class="input-width" name="message" id="message" cols="30" rows="10"></textarea>
+                    
+                    <input class="btn-primary-form input-width" type="submit" value="送出表單">
+                    
+                     <img class="img-fluid" src="public/images/ig-contact.svg" alt="">
+                </select> 
+            </form>
+        </section>
+    </div>
+        
+    </main>
+</body>
+</html>

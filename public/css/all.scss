@@ -4,6 +4,7 @@ $secondary-color:#7bb7e5;
  margin: 0;
   padding: 0;
   list-style: none;
+  box-sizing: border-box;
 //     /* font-family: 'Jacques'; */
  }
 
@@ -462,20 +463,23 @@ footer p{
     color: #222222;
     padding-left: 20px;
   }
+  .tab-link>li>a.active{
+    color: $primary-color
+  }
 
   .btn-primary {
     display: block;
-    background-color: white;
-    color: $primary-color;
+    background-color: #FBDCCD;
+    color: #222222;
     padding: 8px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 2px;
   }
 
-  .text-primary {
-    color: #BD655C;
-  }
+ .text-primary{
+    color: #121212;
+ }
   
   .img-wrap {
     display: block;
@@ -513,85 +517,129 @@ footer p{
   }
 // =======================
 // ======FAQ樣式===========
-  .faq {
-    max-width: 752px;
-    margin: 0 auto;
-  }
-  
-  .faq h2 {
+.container>h2,.question, .answer,.icon-ans{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container>h2{
     text-align: center;
-    padding-top: 40px;
+    margin: 25px;
+}
+.icon-q{
+    display:inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color:#98b06f;
+    margin-right: 8px;
   }
   
-  .faq-content {
-    margin-top: 56px;
+  .icon-q img{
+    vertical-align: middle;
   }
   
-  .faq-panel {
-    padding: 16px 24px;
-    background-color: #F0F0F0;
-    box-shadow: 0px 2px 10px rgba(48, 48, 48, 0.1);
-    box-shadow: 0px 2px 10px rgba(48, 48, 48, 0.1);
-    cursor: pointer;
-    margin-bottom: 48px;
+.question-content{
+    background-color:#FFF9F3;
+    border:1px solid rgba(128, 128, 128, 0.806);
     border-radius: 4px;
-  }
-  
-  .question {
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-  }
-  
-  .ansner {
-    padding-top: 24px;
-    display: none;
-    color: rgba(22, 26, 20, 0.7);
-  }
-  
-  .btn-faq {
-    border: none;
-    width: 24px;
-    height: 24px;
-    background-color: #F0F0F0;
-    position: relative;
+    margin-bottom: 20px;
+    line-height: 20px;
+    padding:10px 40px 10px 10px;
     cursor: pointer;
-  }
-  
-  .btn-faq::before {
+}
+/* .question-content.active .answer{
+    display: block;
+    opacity: 1;
+    height: auto;
+     transition: all 10s;
+} */
+.question-content.active .icon-arrow{
+    transform: rotate(180deg);
+}
+
+
+.icon-ans{
+    background: $primary-color;
+    border-radius: 15px;
+    padding: 0px 10px;
+    margin-right: 8px;
+    color: #fff;
+}
+.answer{
+    display: none;
+    // border-left:4px solid $primary-color;
+    margin-top: 20px;
+    padding-left:-4px;
+    /* opacity: 0; */
+    /* height: 0; */
+}
+.question{
+    position: relative;
+}
+.icon-arrow{
+    transition: transform .3s;
     position: absolute;
-    content: "";
-    width: 20px;
-    height: 2px;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    background-color: #4C684C;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-  }
-  
-  .btn-faq::after {
-    position: absolute;
-    content: "";
-    width: 2px;
-    height: 20px;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    background-color: #4C684C;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-  }
-  
-  .btn-faq.open::after {
-    -webkit-transform: translate(-50%, -50%) rotate(90deg);
-            transform: translate(-50%, -50%) rotate(90deg);
-    -webkit-transition: all .5s;
-    transition: all .5s;
-  }
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    /* background-color: pink; */
+    right:-35px;
+    top:-5px;
+}
+// ============
+// faq end
+// ==============
+
+// customize page start
+.customize-txt>h4{
+   
+   font-size: 18px;
+    text-align: center;
+}
+
+.customize-txt> h4 span{
+    color:$primary-color;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+
+.customize-txt>h5{
+    text-align: center;
+    color: grey;
+ }
+
+ section.form{
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+ }
+ .container-custom{
+    max-width:700px;
+    width: 90%;
+    margin: auto;
+ }
+
+ .input-width{
+    width: 100%;
+    padding:10px;
+    border:none;
+    border:1px solid $primary-color;
+    font-size:16px;
+    line-height: 1.5;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    
+ }
+ label{
+    margin-bottom: 5px;
+    display: block;
+ }
+ .btn-primary-form{
+    cursor: pointer;
+    background-color:rgba(240, 159, 143, 0.758)
+ }
 
 
 
