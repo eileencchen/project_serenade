@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>輪播效果動畫Slide</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .parent{
+            /* 可視範圍寬 */
+            /* width: 500px; */
+            width: 95%;
+            /* max-width: 600px; */
+            /* 高度拿掉 */
+            /* height: 375px; */
+            margin: auto;
+            overflow: hidden;
+            /* 相對定位 */
+            position: relative;
+        }
+        .child{
+            /* 子層第2層，圖片寬度*項目個數 */
+            width: 2000px;
+            /* 去除行內空白，文字大小0 */
+            font-size: 0 ;
+            /* 絕對定位 */
+            /* position: absolute;
+            top:0;
+            left:0; */
+
+        }
+        .parent img{
+            /* 同parent寬 */
+            width: 500px;
+        }
+            /* div時用float 例如圖片與字包在一起*/
+        .left-arrow , .right-arrow{
+            position: absolute;
+            cursor: pointer;
+            /* background-color: rgba(255, 255, 255, 0.71); */
+            width: 40px;
+            height: 100%;
+            top: 0;
+            /* 設定較小塊的區塊 */
+            /* height: 40px; */
+            /* top: 50%; */
+            /* transform:translateY(-50%); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .left-arrow{
+            /* left: 0px; */
+            /* 箭頭變成右邊中間寫法 */
+            top: 50%;
+            right: 42px;
+            transform: translateY(-50%);
+        }
+        .right-arrow{
+            /* right:0px; */
+            /* 箭頭變成右邊中間寫法 */
+            top: 50%;
+            right:30px;
+            transform: translateY(-50%);
+        }
+        .indicator{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            position: absolute;
+            /* 點點橫向的做法 */
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            /* 點點變縱向的作法 */
+            /* left:5px;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg); */
+        }
+        .indicator>li{
+            width: 10px;
+            height: 10px;
+            background-color: grey;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+         }
+        .indicator>li:last-child{
+            margin-right: 0;
+        }
+        .indicator>li.active{
+            background-color: tomato;
+        }
+        .loading-overlay{
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: lightpink;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* left:-50vw */
+            /* display: none; */
+            transition:.3s all;
+            /* 畫面延遲 */
+            transition-delay:1s;
+
+        }
+        .loading-overlay.active{
+            top:-100vh;
+        }
+        .spinner {
+        width: 56px;
+         height: 56px;
+         border-radius: 50%;
+        background: conic-gradient(#0000 10%,#e932d4);
+        -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+        animation: spinner-zp9dbg 1s infinite linear;
+        }
+
+        @keyframes spinner-zp9dbg {
+         to {
+        transform: rotate(1turn);
+        }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- //讀取蓋板 -->
+    <div class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="parent">
+        <div class="child">
+            <img src="https://picsum.photos/seed/picsum/800/600" alt="">
+            <img src="https://picsum.photos/800/600?grayscale" alt="">
+            <img src="../ayn2110.github.io-main/public/images/banner.jpg" alt="">
+            <img src="https://picsum.photos/800/600/?blur0" alt="">
+        </div>
+        <div class="left-arrow"><</div>
+        <div class="right-arrow">></div>
+        <ol class="indicator">
+            <li class="active"></li>
+            
+        </ol>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        //第二層裡面最前面 補上 圖片陣列中的最後一個的複製元素
+        $('.child').prepend( $('.child>img').last().clone( ))
+        //第二層裡面最前面 補上 圖片陣列中的第二個的複製元素
+        $('.child').append( $('.child>img').eq(1).clone() )
+        let currentNum         = 1 //當前的數字
+        let parentWidth        = $('.parent').width() //父層寬度
+        let imgLength          = $('.child>img').length //子層個數
+        let childTotalWidth     = parentWidth * imgLength //父層寬度*子層個數
+        //調整第二層一開始位移的位置
+        $('.child').css({'margin-left' : -parentWidth * currentNum})
+        $('.child').width(childTotalWidth)//子層寬 = 父層寬度*子層個數(進到畫面讀)
+        $('.child>img').width(parentWidth)//子層下的圖片寬 =父層寬度
+       
+         //loading start
+         $(window).on('load',function(){
+            $('.loading-overlay').addClass('active')
+            parentWidth        = $('.parent').width()
+            childTotalWidth     = parentWidth * imgLength
+            $('.child').css({'margin-left' : -parentWidth * currentNum})
+            $('.child').width(childTotalWidth)
+            $('.child>img').width(parentWidth)
+        })//window load end
+        
+        //for迴圈 從0到圖片總數-2的條件下，i累加1
+        for (let i = 0; i < imgLength-3;  i++){
+            console.log(i)
+            $('.indicator>li.active').after('<li></li>')
+        }
+
+        //RWD縮放時的變化
+        $(window).resize(function(){
+            parentWidth        = $('.parent').width()
+            childTotalWidth     = parentWidth * imgLength
+            $('.child').css({'margin-left' : -parentWidth * currentNum})
+            $('.child').width(childTotalWidth)
+            $('.child>img').width(parentWidth)
+        })//Window resize wnd
+
+        
+        $('.right-arrow').on('click' , function( ){
+            // console.log('外', currentNum)
+            if( currentNum == imgLength - 1){//假如當前的數字相等於圖片的總數
+
+            }else{
+                console.log(currentNum, imgLength)
+                currentNum = currentNum + 1 //當前數字累加1
+                common()
+                //$('.child').animate({'margin-left' : -parentWidth * (currentNum - 1)})
+            }//if currentNum == imgLength end
+        })//.right-arrow end 
+
+        $(' .left-arrow').on('click', function(){
+            if( currentNum == 0 ){
+                
+            }else{
+                 currentNum = currentNum - 1
+                 common()
+               // $('.child').animate({'margin-left' : -parentWidth * (currentNum - 1)})
+            }//if currentNum == 1 end 
+
+        })//.left-arrow end 
+
+
+        $('.indicator>li').on('click' , function(){
+            //console.log('當前的',currentNum)
+            //console.log( '跟現在點擊的',$(this).index() )//序列號
+            //index()//序列號
+            //eq()//第幾個的元素
+            currentNum = $(this).index() + 1//當前的數字=點擊的序列號+1
+            commom()
+           // $(' .indicator>li').eq(currentNum - 1).addClass('active')
+            //$(' .indicator>li').eq(currentNum - 1).siblings().removeClass('active')
+        })//.indicator>li end 
+            
+
+        function common(){
+            //callback函式執行完之後執行
+            $('.child').animate({'margin-left' : -parentWidth * currentNum },function(){
+                // =============callback 函式執行完之後執行=========
+                //假如當前的數字 相等於總數-1
+                if (currentNum == imgLength - 1){
+                    currentNum = 1
+                }
+                if (currentNum ==0){
+                    currentNum = imgLength - 2
+                }
+
+                //前面動畫跑完執行
+                $('child').css({'margin-left' : -parentWidth * currentNum})
+                $(' .indicator>li').eq(currentNum - 1).addClass('active')
+                $(' .indicator>li').eq(currentNum - 1).siblings().removeClass('active')
+
+            })//callback end 
+
+        }//common() end 
+        
+        //計時器//
+        setInterval(function(){
+            $('.right-arrow').click()
+        },3000)
+
+    </script>
+</body>
+</html>
