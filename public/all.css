@@ -622,10 +622,6 @@ aside > ul li a {
   padding-left: 20px;
 }
 
-.tab-link {
-  display: flex;
-}
-
 .tab-link > li > a {
   text-decoration: none;
   width: 31%;
@@ -788,7 +784,26 @@ aside > ul li a {
 
 .customize-txt > h5 {
   text-align: center;
+}
+
+.customize-txt > h5 > span {
+  text-align: center;
   color: grey;
+  position: relative;
+}
+
+.customize-txt > h5 > span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 50%;
+  width: 200px;
+  transform: translateX(-50%) translateY(150%);
+  height: 20px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../images/titledecor.svg);
 }
 
 section.form {
