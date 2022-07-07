@@ -22,7 +22,15 @@ if ( windowWidth >= 768 ){
         $('.main-nav').toggleClass('active')
     })// btn-nav-switch end
     
-    $('nav>ul>li').on('click',function(){
+    $('#btn-nav-switch').on('click',function(){
         $(this).find('.submenu').toggleClass('active')
     })// nav>ul>li end
 }// windowWidth>=768 end
+
+
+
+
+// scoll top
+$('.pagetop').click(function(){
+    $('html,body').animate({scrollTop:0 },1000);
+});// scoll end

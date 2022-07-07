@@ -622,8 +622,33 @@ aside > ul li a {
   padding-left: 20px;
 }
 
+.tab-link {
+  display: flex;
+}
+
+.tab-link > li > a {
+  text-decoration: none;
+  width: 31%;
+  margin: 1%;
+  line-height: 40px;
+  color: #194663;
+  text-align: center;
+}
+
 .tab-link > li > a.active {
-  color: #f09f8f;
+  background-color: lightblue;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.img-fluid {
+  width: 100%;
 }
 
 .btn-primary {
