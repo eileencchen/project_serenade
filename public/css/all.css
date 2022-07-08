@@ -624,7 +624,6 @@ aside > ul li a {
 
 .tab-link > li > a {
   text-decoration: none;
-  width: 31%;
   margin: 1%;
   line-height: 40px;
   color: #194663;
@@ -844,7 +843,7 @@ label {
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: beige;
+  background-color: lightpink;
   z-index: 999;
   display: flex;
   justify-content: center;
@@ -853,7 +852,7 @@ label {
   /* display: none; */
   transition: 0.3s all;
   /* 畫面延遲 */
-  transition-delay: 1.5s;
+  transition-delay: 1s;
 }
 
 .loading-overlay.active {
