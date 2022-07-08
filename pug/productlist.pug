@@ -1,0 +1,230 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Serenade | 產品系列
+    link(rel='stylesheet' href='public/css/all.css')
+
+  body
+    header.main-header
+      .header-left
+        .menu-btn
+        .container
+          a.logo(href='index.html')
+            img(src='public/images/Logo.png' alt='logo')
+      nav#btn-nav-toggle.main-nav(href='javascript:;')
+        a(href='productlist.html') Shop
+        a(href='#') About us
+        a(href='customize.html') Customize
+        a(href='faq.html') FAQ
+        a.display-none.display-md-block(href='#')
+          img(src='public/images/profile.png' alt='profile')
+        a.display-none.display-md-block(href='#')
+          img(src='public/images/shoppingcart.png' alt='shopping')
+      // //手機板767 icon start//
+      nav.tool-bar.display-md-none
+        ul
+          li
+            a(href='profile.html')
+              img(src='public/images/profile.png' alt='profile')
+          li
+            a(href='#')
+              img(src='public/images/shoppingcart.png' alt='shopping')
+      // //手機板767 icon end//
+    main
+      section.container
+        img.img-fluid(src='public/images/Neutral Minimalist Are You Ready New Collection Fashion Banner.svg' alt='')
+      // breadcrumb start
+      section
+        .container
+          .row
+            ul.col-12.breadcrumb
+              li
+                a(href='index.html') 首頁
+              li
+                a(href='product.html') 所有商品
+      // 產品tab連結
+      .container
+        .row
+          aside.col-12.col-md-3.col-lg-2
+            // 加入商品link
+            ul.tab-link("='')
+              li
+                a.btn-primary(href='#tab1') 全部商品
+              li
+                a.btn-primary(href='#tab2') Best sellers
+              li
+                a.btn-primary(href='#tab3') 口水巾
+              li
+                a.btn-primary(href='#tab4') 安撫巾
+              li
+                a.btn-primary(href='#tab5') 雙面圍兜
+                ul
+                  li
+                    a(href='#tab6') 雙面蛋兜
+                  li
+                    a(href='#tab7') 雙面三角兜
+              li
+                a.btn-primary(href='#tab8') 手作訂製服
+                ul
+                  li
+                    a(href='#tab9') 包屁衣
+                  li
+                    a(href='#tab10') 絨毛背心
+              li
+                a.btn-primary(href='#') 手作小物
+                ul
+                  li
+                    a(href='#') 髮帶
+                  li
+                    a(href='#') 花瓣帽
+              li
+                a.btn-primary(href='#') 彌月禮盒
+        // 連結頁面tab1 全部商品 start
+        .row
+          #tab1.tab-content.active.col-12.col-md-9.col-lg-10
+            .col-4.col-md-4.text-center
+              a.img-wrap(href='#')
+                .img-overlay
+                  img.img-fluid.img-rounded(src='public/images/collection01.jpg' alt='')
+                  span.icon-new HOT
+              a.text-primary(href='#') 夏日風情｜冰淇淋造型寶寶安撫巾
+              p.text-center $450
+            .col-4.text-center
+              a.img-wrap(href='#')
+                .img-overlay
+                  img.img-fluid.img-rounded(src='public/images/a-02.png' "='' alt='')
+                  span.icon-new HOT
+              a.text-primary(href='#') 海洋世界｜鯨魚造型寶寶安撫巾
+              p.text-center $450
+            .col-4.text-center
+              a.img-wrap(href='#')
+                .img-overlay
+                  img.img-fluid.img-rounded(src='public/images/a-03.png' alt='')
+              a.text-primary(href='#') 重返侏儸紀｜恐龍造型寶寶安撫巾
+              p.text-center $450
+            .col-4.text-center
+              a.img-wrap(href='#')
+                .img-overlay
+                  img.img-fluid.img-rounded(src='public/images/a-04.png' alt='')
+              a.text-primary(href='#') 動物奇旅｜Q比刺蝟造型寶寶安撫巾
+              p.text-center $450
+            .col-4.text-center
+              a.img-wrap(href='#')
+                .img-overlay
+                  img.img-fluid.img-rounded(src='public/images/a-05.png' alt='')
+              a.text-primary(href='#') 動物奇旅｜呆頭鵝造型寶寶安撫巾
+              p.text-center  $450
+            .col-4.text-center
+              a.img-wrap(href='#')
+                .img-overlay
+                  img.img-fluid.img-rounded(src='public/images/a-06.jpg' alt='')
+              a.text-primary(href='#') 我就呆萌｜柯基造型寶寶安撫巾
+              p.text-center $450
+            .col-4.text-center
+              a.img-wrap(href='#')
+                .img-overlay
+                  img.img-fluid.img-rounded(src='public/images/dress01.jpg' alt='')
+              a.text-primary(href='#') 春暖花開 ｜小花園女寶包屁衣
+              p.text-center $450
+            .col-4.text-center
+              a.img-wrap(href='#')
+                .img-overlay
+                  img.img-fluid.img-rounded(src='public/images/dress02.jpg' alt='')
+              a.text-primary(href='#') 恐龍戰隊｜軍綠恐龍三件套裝
+              p.text-center $450
+            .col-4.text-center
+              a.img-wrap(href='#')
+                .img-overlay
+                  img.img-fluid.img-rounded(src='public/images/hair01.jpg' alt='')
+              a.text-primary(href='#') 米妮寶寶｜紅色點點親子髮帶
+              p.text-center $450
+      // 全部商品end
+      // #2 best seller start
+      #tab2.tab-content.active.col-12.col-md-9.col-lg-10
+        .row
+          .col-4.col-md-4.text-center
+            a.img-wrap(href='#')
+              .img-overlay
+                img.img-fluid.img-rounded(src='public/images/collection01.jpg' alt='')
+                span.icon-new HOT
+            a.text-primary(href='#') 夏日風情｜冰淇淋造型寶寶安撫巾
+            p.text-center $450
+          .col-4.text-center
+            a.img-wrap(href='#')
+              .img-overlay
+                img.img-fluid.img-rounded(src='public/images/a-02.png' "='' alt='')
+                span.icon-new HOT
+            a.text-primary(href='#') 海洋世界｜鯨魚造型寶寶安撫巾
+            p.text-center $450
+          // #2 end
+          // #3 start
+          #tab3.tab-content.active.col-12.col-md-9.col-lg-10
+            .row
+              .col-4.col-md-4.text-center
+                a.img-wrap(href='#')
+                  .img-overlay
+                    img.img-fluid.img-rounded(src='public/images/collection01.jpg' alt='')
+                    span.icon-new HOT
+                a.text-primary(href='#') 夏日風情｜冰淇淋造型寶寶安撫巾
+                p.text-center $450
+              .col-4.text-center
+                a.img-wrap(href='#')
+                  .img-overlay
+                    img.img-fluid.img-rounded(src='public/images/a-02.png' "='' alt='')
+                    span.icon-new HOT
+                a.text-primary(href='#') 海洋世界｜鯨魚造型寶寶安撫巾
+                p.text-center $450
+              // #3 end
+              // footer>.container>.row>dl.col-3*5>dt{標題$$}+dd*4>a{項目$$}^^^p.copyright.text-center{Copyright｜Eileen chen｜All Rights Reserved}
+              // footer start
+              footer
+                .container
+                  .row
+                    dl.col-12.footer-subs(class='.col-md-3')
+                      h4
+                        | 註冊首單贈
+                        span $50
+                        | 購物金
+                      form
+                        input(type='text')
+                        input(type='submit' value='註冊')
+                  .row
+                    dl.col-4.col-md-6.col-lg-4
+                      dt 幫助/政策
+                      dd
+                        a(href='#') 聯絡我們
+                      dd
+                        a(href='#') 網站條款
+                    dl.col-4.col-md-6.col-lg-4
+                      dt 網站地圖
+                      dd
+                        a(href='#') 所有商品
+                      dd
+                        a(href='#') 購物須知
+                    dl.col-4.col-md-12.col-lg-4
+                      dt 追蹤我們
+                      dd
+                        a(href='https://www.facebook.com/Serenade2020/')
+                          img(src='public/images/facebook-square-brands.svg' alt='')
+                      dd
+                        a(href='https://www.instagram.com/serenade_2020/')
+                          img(src='public/images/instagram-brands.svg' alt='')
+                      dd
+                        a(href='https://www.pinkoi.com/store/serenade2020')
+                          img(src='public/images/PINKOI 1.png' alt='')
+                  p.copyright.text-center Copyright © 2022 serenade All Rights Reserved
+              script(src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous')
+              script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js')
+              script(src='public/js/serenade-js.js')
+              script.
+                $('.tab-link>a').on('click', function(e){
+                e.preventDefault()
+                $(this).addClass('active')
+                $(this).siblings().removeClass('active')
+                console.log($(this).attr('href'))
+                $( $(this).attr('href') ).addClass('active')
+                $( $(this).attr('href') ).siblings().removeClass('active')
+                })//.tab-link>a end

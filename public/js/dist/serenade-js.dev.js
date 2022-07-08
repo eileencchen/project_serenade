@@ -26,8 +26,20 @@ if (windowWidth >= 768) {
     $(this).find('.submenu').toggleClass('active');
   }); // nav>ul>li end
 } // windowWidth>=768 end
-// scoll top
+// loading start
 
+
+$(window).on('load', function () {
+  $('.loading-overlay').addClass('active');
+  parentWidth = $('.parent').width();
+  childTotalWidth = parentWidth * imgLength;
+  $('.child').css({
+    'margin-left': -parentWidth * currentNum
+  });
+  $('.child').width(childTotalWidth);
+  $('.child>img').width(parentWidth);
+}); // loading end
+// scoll top
 
 $('.pagetop').click(function () {
   $('html,body').animate({

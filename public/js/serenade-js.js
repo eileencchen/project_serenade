@@ -27,8 +27,16 @@ if ( windowWidth >= 768 ){
     })// nav>ul>li end
 }// windowWidth>=768 end
 
-
-
+// loading start
+$(window).on('load',function(){
+    $('.loading-overlay').addClass('active')
+    parentWidth        = $('.parent').width()
+    childTotalWidth     = parentWidth * imgLength
+    $('.child').css({'margin-left' : -parentWidth * currentNum})
+    $('.child').width(childTotalWidth)
+    $('.child>img').width(parentWidth)
+})
+// loading end
 
 // scoll top
 $('.pagetop').click(function(){

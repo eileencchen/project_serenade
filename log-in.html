@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenade|帳號登入</title>
+    <link rel="stylesheet" href="public/css/all.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            width: 100%;
+        }
+        .container{
+            width: 90%;
+            max-width: 1140px;
+            margin: auto;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .left{
+            width: 18%;
+            margin-right: 2%;
+            text-align: right;
+        }
+        .right{
+            width: 80%;
+        }
+        .input-group{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        @media (max-width:767px){
+            .left{
+                width: 100%;
+                text-align: left;
+            }
+            .right{
+                width: 100%;
+            }
+
+        }
+        .btn-primary{
+            background-color: lightblue;
+        }
+        input[type="submit"]{
+            cursor: pointer;
+            border:none;
+            padding:10px;
+            border-radius: 4px;
+            width: 100%;
+        }
+        form{
+            width: 100%;
+        }
+    </style>
+</head>
+<header class="main-header">
+    <div class="header-left">
+        <div class="menu-btn"></div>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="public/images/Logo.png" alt="logo">
+            </a>
+        </div>
+    </div>
+    <nav class="main-nav " id="btn-nav-toggle" href= "javascript:;">
+        <a href="productlist.html">Shop</a>
+        <a href="#">About us</a>
+        <a href="customize.html">Customize</a>
+        <a href="faq.html">FAQ</a>
+        <a href="#" class="display-none display-md-block">
+            <img src="public/images/profile.png" alt="profile">
+        </a>
+        <a href="#"  class="display-none display-md-block">
+            <img src="public/images/shoppingcart.png" alt="shopping">
+        </a>
+    </nav>
+    <!-- //手機板767 icon start// -->
+    <nav class="tool-bar display-md-none">
+        <ul >
+            <li>
+                <a href="profile.html">
+                    <img src="public/images/profile.png" alt="profile">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="public/images/shoppingcart.png" alt="shopping">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- //手機板767 icon end// -->
+</header>
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="dashboard.html" method="POST">
+                <div class="input-group">
+                    <div class="left">
+                        <label for="account">帳號</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" id="account" name="account">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="left">
+                        <label for="password">密碼</label>
+                    </div>
+                    <div class="right">
+                        <input type="password" id="password" name="password">
+                    </div>
+                </div>
+                <input type="submit" class="btn-primary" value="登入">
+            </form>
+        </div>
+    </div>
+   
+    
+</body>
+</html>
